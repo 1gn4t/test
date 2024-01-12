@@ -1,4 +1,20 @@
-export const TPagination = ({ prev, next, start, end, total }) => {
+import { FC } from 'react';
+
+interface IPaginationProps {
+  prev: () => void;
+  next: () => void;
+  start: number;
+  end: number;
+  total: number;
+}
+
+export const TPagination: FC<IPaginationProps> = ({
+  prev,
+  next,
+  start,
+  end,
+  total,
+}) => {
   return (
     <nav
       className='flex items-center flex-column flex-wrap md:flex-row justify-between pt-4'

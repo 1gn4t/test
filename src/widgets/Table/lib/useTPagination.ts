@@ -1,6 +1,7 @@
 import { useState } from 'react';
+import { ArrayPersons } from '../../../app/types/types';
 
-export const useTPagination = (data) => {
+export const useTPagination = (data: ArrayPersons) => {
   const STEP = 10;
   const [start, setStart] = useState(0);
   const [end, setEnd] = useState(10);
